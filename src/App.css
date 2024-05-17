@@ -1,0 +1,43 @@
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .note {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .note-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input,
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

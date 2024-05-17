@@ -1,0 +1,60 @@
+.note {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note small {
+  display: block;
+  color: #888;
+  margin: 5px;
+}
+
+.note button {
+  margin: 3px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: green;
+  color: white;
+}
+
+.edit-button {
+  background-color: blue;
+  color: white;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: darkgreen;
+}
+
+.edit-button:hover {
+  background-color: darkblue;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.cancel-button:hover {
+  background-color: darkred;
+}
