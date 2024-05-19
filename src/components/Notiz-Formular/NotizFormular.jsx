@@ -3,11 +3,13 @@ import { useState } from "react";
 
 function NotizFormular({ onAdd }) {
   const [text, setText] = useState("");
+  const [priority, setPriority] = useState("weniger Wichtig");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    onAdd(text);
+    onAdd(text, priority);
     setText("");
+    setPriority("weniger Wichtig");
   };
 
   return (
@@ -18,6 +20,11 @@ function NotizFormular({ onAdd }) {
         onChange={(e) => setText(e.target.value)}
         placeholder="Neue Notiz hinzufügen"
       />
+      <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+        <option value="sehr wichtig">sehr Wichtig</option>
+        <option value="wichtig">Wichtig</option>
+        <option value="weniger wichtig">weniger Wichtig</option>
+      </select>
       <button type="submit">Hinzufügen</button>
     </form>
   );

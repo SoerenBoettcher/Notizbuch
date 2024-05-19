@@ -14,10 +14,11 @@ function App() {
     localStorage.setItem("notes", JSON.stringify(notes));
   };
 
-  const addNote = (text) => {
+  const addNote = (text, priority) => {
     const newNote = {
       id: Date.now(),
       text,
+      priority,
       timestamp: new Date().toLocaleString(),
     };
     const updatedNotes = [...notes, newNote];
@@ -31,9 +32,9 @@ function App() {
     saveNotes(updatedNotes);
   };
 
-  const editNote = (id, newText) => {
+  const editNote = (id, newText, newPriority) => {
     const updatedNotes = notes.map((note) =>
-      note.id === id ? { ...note, text: newText } : note
+      note.id === id ? { ...note, text: newText, priority: newPriority } : note
     );
     setNotes(updatedNotes);
     saveNotes(updatedNotes);
@@ -41,11 +42,11 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar notes={notes} onDelete={deleteNote} onEditSave={editNote} />
       <div className="main-content">
         <h1>Notizbuch</h1>
         <NotizFormular onAdd={addNote} />
       </div>
+      <Sidebar notes={notes} onDelete={deleteNote} onEditSave={editNote} />
       <Footer />
     </div>
   );

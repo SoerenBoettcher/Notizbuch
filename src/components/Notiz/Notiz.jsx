@@ -5,14 +5,29 @@ import "./Notiz.css";
 function Notiz({ note, onDelete, onEditSave }) {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(note.text);
+  const [newPriority, setNewPriority] = useState(note.priority);
 
   const saveHandler = () => {
-    onEditSave(note.id, newText);
+    onEditSave(note.id, newText, newPriority);
     setIsEditing(false);
   };
 
+  const getBackgroundColor = (priority) => {
+    switch (priority) {
+      case "wichtig":
+        return "yellow";
+      case "weniger wichtig":
+        return "lightblue";
+      default:
+        return "orange";
+    }
+  };
+
   return (
-    <div className="note">
+    <div
+      className="note"
+      style={{ backgroundColor: getBackgroundColor(note.priority) }}
+    >
       {isEditing ? (
         <div>
           <input
@@ -20,6 +35,14 @@ function Notiz({ note, onDelete, onEditSave }) {
             value={newText}
             onChange={(e) => setNewText(e.target.value)}
           />
+          <select
+            value={newPriority}
+            onChange={(e) => setNewPriority(e.target.value)}
+          >
+            <option value="sehr wichtig">sehr Wichtig</option>
+            <option value="wichtig">Wichtig</option>
+            <option value="weniger wichtig">weniger Wichtig</option>
+          </select>
           <button className="save-button" onClick={saveHandler}>
             Speichern
           </button>
