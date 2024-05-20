@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "./components/Header/Header.jsx";
 import NotizFormular from "./components/Notiz-Formular/NotizFormular.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Sidebar from "./components/sidebar/Sidebar.jsx";
@@ -41,14 +42,16 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="main-content">
-        <h1>Notizbuch</h1>
-        <NotizFormular onAdd={addNote} />
+    <>
+      <div className="App">
+        <Header />
+        <div className="main">
+          <NotizFormular onAdd={addNote} />
+          <Sidebar notes={notes} onDelete={deleteNote} onEditSave={editNote} />
+        </div>
+        <Footer />
       </div>
-      <Sidebar notes={notes} onDelete={deleteNote} onEditSave={editNote} />
-      <Footer />
-    </div>
+    </>
   );
 }
 

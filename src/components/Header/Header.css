@@ -1,12 +1,12 @@
-footer {
+.header-content {
+  width: 100%;
+  height: 15vh;
   display: flex;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  padding: 10px;
+  align-items: center;
   color: bisque;
+  text-decoration: underline;
   background-image: url(././src/assets/dark-black-background.jpg);
-  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }

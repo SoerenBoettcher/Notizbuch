@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import "./NotizFormular.css";
 
 function NotizFormular({ onAdd }) {
   const [text, setText] = useState("");
@@ -13,20 +14,22 @@ function NotizFormular({ onAdd }) {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Neue Notiz hinzufügen"
-      />
-      <select value={priority} onChange={(e) => setPriority(e.target.value)}>
-        <option value="sehr wichtig">sehr Wichtig</option>
-        <option value="wichtig">Wichtig</option>
-        <option value="weniger wichtig">weniger Wichtig</option>
-      </select>
-      <button type="submit">Hinzufügen</button>
-    </form>
+    <div className="main-content">
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Neue Notiz hinzufügen"
+        />
+        <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+          <option value="sehr wichtig">sehr Wichtig</option>
+          <option value="wichtig">Wichtig</option>
+          <option value="weniger wichtig">weniger Wichtig</option>
+        </select>
+        <button type="submit">Hinzufügen</button>
+      </form>
+    </div>
   );
 }
 
