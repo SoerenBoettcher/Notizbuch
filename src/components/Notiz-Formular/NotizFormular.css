@@ -7,6 +7,12 @@
   flex-direction: column;
 }
 
+.form-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 form {
   margin: 20px 0;
 }
@@ -14,7 +20,8 @@ form {
 input {
   width: 250px;
   padding: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 button {

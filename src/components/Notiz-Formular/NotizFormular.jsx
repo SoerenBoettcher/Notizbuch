@@ -22,12 +22,17 @@ function NotizFormular({ onAdd }) {
           onChange={(e) => setText(e.target.value)}
           placeholder="Neue Notiz hinzufügen"
         />
-        <select value={priority} onChange={(e) => setPriority(e.target.value)}>
-          <option value="sehr wichtig">sehr Wichtig</option>
-          <option value="wichtig">Wichtig</option>
-          <option value="weniger wichtig">weniger Wichtig</option>
-        </select>
-        <button type="submit">Hinzufügen</button>
+        <div className="form-select">
+          <select
+            value={priority}
+            onChange={(e) => setPriority(e.target.value)}
+          >
+            <option value="sehr wichtig">sehr Wichtig</option>
+            <option value="wichtig">Wichtig</option>
+            <option value="weniger wichtig">weniger Wichtig</option>
+          </select>
+          <button type="submit">Hinzufügen</button>
+        </div>
       </form>
     </div>
   );

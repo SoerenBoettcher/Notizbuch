@@ -1,4 +1,5 @@
 .note {
+  max-width: 300px;
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
@@ -27,6 +28,17 @@
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
+}
+
+.note select {
+  width: 250px;
+  margin-top: 2.5px;
+  margin-left: 5px;
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-around;
 }
 
 .save-button {

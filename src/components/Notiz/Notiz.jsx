@@ -43,7 +43,7 @@ function Notiz({ note, onDelete, onEditSave }) {
             <option value="wichtig">Wichtig</option>
             <option value="weniger wichtig">weniger Wichtig</option>
           </select>
-          <div>
+          <div className="button-div">
             <button className="save-button" onClick={saveHandler}>
               Speichern
             </button>
@@ -59,12 +59,14 @@ function Notiz({ note, onDelete, onEditSave }) {
         <div>
           <p>{note.text}</p>
           <small>{note.timestamp}</small>
-          <button className="edit-button" onClick={() => setIsEditing(true)}>
-            Bearbeiten
-          </button>
-          <button className="delete-button" onClick={() => onDelete(note.id)}>
-            Löschen
-          </button>
+          <div className="button-div">
+            <button className="edit-button" onClick={() => setIsEditing(true)}>
+              Bearbeiten
+            </button>
+            <button className="delete-button" onClick={() => onDelete(note.id)}>
+              Löschen
+            </button>
+          </div>
         </div>
       )}
     </div>
