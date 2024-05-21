@@ -29,7 +29,7 @@ function Notiz({ note, onDelete, onEditSave }) {
       style={{ backgroundColor: getBackgroundColor(note.priority) }}
     >
       {isEditing ? (
-        <div>
+        <div className="note-edit">
           <input
             type="text"
             value={newText}
@@ -43,12 +43,17 @@ function Notiz({ note, onDelete, onEditSave }) {
             <option value="wichtig">Wichtig</option>
             <option value="weniger wichtig">weniger Wichtig</option>
           </select>
-          <button className="save-button" onClick={saveHandler}>
-            Speichern
-          </button>
-          <button className="cancel-button" onClick={() => setIsEditing(false)}>
-            Abbrechen
-          </button>
+          <div>
+            <button className="save-button" onClick={saveHandler}>
+              Speichern
+            </button>
+            <button
+              className="cancel-button"
+              onClick={() => setIsEditing(false)}
+            >
+              Abbrechen
+            </button>
+          </div>
         </div>
       ) : (
         <div>

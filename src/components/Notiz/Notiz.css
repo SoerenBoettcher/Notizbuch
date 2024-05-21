@@ -9,6 +9,12 @@
   align-items: center;
 }
 
+.note-edit {
+  display: flex;
+  gap: 0.1875rem;
+  flex-direction: column;
+}
+
 .note small {
   display: block;
   color: #888;

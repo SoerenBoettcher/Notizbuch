@@ -1,10 +1,11 @@
 .App {
   height: 100vh;
+  font-family: "Caveat", cursive;
 }
 
 .main {
   display: flex;
-  height: 80vh;
+  height: 81vh;
   background-image: url(././src/assets/notepad.jpg);
   background-position: center;
   background-size: cover;
