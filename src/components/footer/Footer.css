@@ -6,7 +6,7 @@ footer {
   width: 100vw;
   padding: 10px;
   color: bisque;
-  background-image: url(././src/assets/dark-black-background.png);
+  background-image: url(../../../public/dark-black-background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

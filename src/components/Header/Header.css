@@ -6,7 +6,7 @@
   align-items: center;
   color: bisque;
   text-decoration: underline;
-  background-image: url(././src/assets/dark-black-background.png);
+  background-image: url(../../../public/dark-black-background.png);
   background-position: center;
   background-size: cover;
 }
